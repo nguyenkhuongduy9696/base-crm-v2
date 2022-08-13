@@ -1,0 +1,27 @@
+:root {
+    --color-background-weak: #fff;
+    --color-background-medium: #f9f8f8;
+    --color-background-strong: #f5f3f3;
+}
+
+*{
+    font-family: "Google Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 13px;
+    background-color: var(--color-background-medium);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #c1c1c1;
+}
+::-webkit-scrollbar-track {
+    padding: 6px;
+}
+
