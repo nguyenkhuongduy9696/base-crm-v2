@@ -1,3 +1,3 @@
 import {lazy} from 'react';
 
-export const LoginScreen = lazy(() => import('./../auth/LoginPage'));
+export const LoginScreen = lazy(() => import('./../auth/login/LoginPage'));
