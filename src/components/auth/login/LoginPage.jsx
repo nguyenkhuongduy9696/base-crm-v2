@@ -3,8 +3,10 @@ import styles from './styles.module.scss';
 import Logo from 'assets/images/logo/logo.png';
 import BaseInput from 'components/base/baseInput/BaseInput';
 import {MdCopyright} from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
+  const navigate = useNavigate();
 
   const footerLinks = [
     {id: 1, title: 'NextCRM.vn', href: 'https://nextcrm.vn'},
@@ -30,7 +32,8 @@ const LoginPage = () => {
             placeholder='Nhập mật khẩu'
             type='password'
           />
-          <div className={ `w-full text-white text-center bg-primary hover:bg-primary-strong mb-4 md:mb-8 ${styles.button}` }>
+          <div className={ `w-full text-white text-center bg-primary hover:bg-primary-strong mb-4 md:mb-8 ${styles.button}` }
+            onClick={ () => navigate('/', {replace: true}) }>
               Đăng nhập
           </div>
           <div className='w-full flex items-center justify-center'>

@@ -75,11 +75,15 @@ body {
     font-size: 20px;
 }
 
+.separator {
+    border-top: 1px solid #edeae9;
+    margin: 4px 0;
+}
+
 .sidebar-collapsed {
     margin-left: -240px;
     visibility: hidden;
 }
-
 
 .__react_component_tooltip {
     padding: 6px 10px!important;
@@ -87,4 +91,17 @@ body {
 }
 .__react_component_tooltip.show {
     opacity: 1!important;
+}
+
+.dropdown-ul {
+    width: 100%;
+    padding: 6px 0;
+    z-index: 2;
+}
+.dropdown-ul li {
+    padding: 8px 20px;
+    cursor: pointer;
+}
+.dropdown-ul li:hover {
+    background-color: #f8f8f8;
 }

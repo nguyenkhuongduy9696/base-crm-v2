@@ -26,7 +26,7 @@ module.exports = {
       'warning': '#ffc107',
       'danger': '#dc3545',
       'light': '#f8f9fa',
-      'dark': '#343a40',
+      'dark': '#363636',
     }
   },
   plugins: [],

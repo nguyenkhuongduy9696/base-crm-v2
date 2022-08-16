@@ -26,7 +26,7 @@ const SideBar = () => {
   return (
     <>
       <div className={ `${styles.container} ${isVisible ? '' : 'sidebar-collapsed'}`} id='sidebar'>
-        <div className="w-full flex items-center justify-between py-5 px-4">
+        <div className="w-full flex items-center justify-between py-5 px-4 mb-4">
           <NavLink to='/'>
             <img src={Logo} alt="logo" className='w-32 h-7' />
           </NavLink>

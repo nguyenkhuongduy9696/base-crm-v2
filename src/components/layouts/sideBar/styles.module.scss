@@ -4,21 +4,39 @@
     flex-direction: column;
     transition: margin-left 250ms ease-out,transform 250ms ease-out;
     width: 240px;
-    background-color: black;
+    background-color: #1e1f21;
     min-height: 100vh;
     max-height: 100vh;
     overflow-y: auto;
     color: #fff;
     .menuItem {
-        padding: 0 24px;
-        height: 32px;
-        line-height: 32px;
+        padding: 6px 24px;
         cursor: pointer;
         &.selected {
             background-color: rgb(73, 73, 73);
         }
         &:hover {
             background-color: rgb(51, 51, 51);
+        }
+    }
+    .subMenuItem {
+        padding: 6px 24px 6px 38px;
+        cursor: pointer;
+        &.selected {
+            background-color: rgb(73, 73, 73);
+        }
+        &:hover {
+            background-color: rgb(51, 51, 51);
+        }
+    }
+    .subMenuUl {
+        width: 100%;
+        transition: max-height 0.3s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
+        &.expanded {
+            max-height: 800px;
+            transition: max-height 0.4s ease-in-out;
         }
     }
 }
