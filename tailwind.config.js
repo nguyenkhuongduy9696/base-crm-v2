@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: 'jit',
   content: [],
   theme: {
     extend: {},
@@ -19,7 +18,8 @@ module.exports = {
       'white': '#fff',
       'gray': '#969696',
       'gray-dark': '#343a40',
-      'primary': '#57cc8a',
+      'primary': '#0bc98d',
+      'primary-strong': '#0cba83',
       'secondary': '#6c757d',
       'success': '#28a745',
       'info': '#17a2b8',

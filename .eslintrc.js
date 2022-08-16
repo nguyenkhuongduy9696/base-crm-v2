@@ -23,6 +23,10 @@ module.exports = {
     'quotes': ['error', 'single'],
     'no-unused-vars': ['error', { 'vars': 'all', 'args': 'after-used', 'ignoreRestSiblings': false }],
     'indent': ['error', 2],
-    'key-spacing': ['error', {'afterColon': true}]
+    'key-spacing': ['error', {'afterColon': true}],
+    'react/prop-types': [
+      2,
+      {'ignore': ['children']}
+    ],
   }
 };

@@ -1,4 +1,4 @@
-$boxShadow : 0 5px 20px 0 rgba(109, 110, 111, 0.08);
+$boxShadow : 0 5px 20px 0 rgba(52, 51, 51, 0.08);
 
 .container {
     width: calc(100% - 16px);
@@ -9,7 +9,7 @@ $boxShadow : 0 5px 20px 0 rgba(109, 110, 111, 0.08);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding: 30px 32px 30px 32px ;
+    padding: 30px 32px 30px 32px;
     img {
         width: 10rem;
         background-color: #fff;
@@ -22,5 +22,39 @@ $boxShadow : 0 5px 20px 0 rgba(109, 110, 111, 0.08);
         line-height: 40px;
         font-weight: 400;
         margin-bottom: 20px;
+    }
+    .button {
+        margin-top: 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        height: 36px;
+        line-height: 36px;
+        padding: 0 12px;
+        cursor: pointer;
+    }
+}
+
+.loginFooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 8px;
+    margin-right: 8px;
+    li {
+        font-size: 14px;
+        a {
+            cursor: pointer;
+            color: inherit;
+            fill: inherit;
+            text-decoration: none;
+        }
+        &:not(:first-child) {
+            a {
+                &::before {
+                    content: "•";
+                    margin: 0 6px;
+                }  
+            }    
+        }
     }
 }

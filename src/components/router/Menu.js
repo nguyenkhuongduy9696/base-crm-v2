@@ -1,0 +1,128 @@
+export const SidebarMenu = [
+  {
+    id: 1,
+    icon: 'home',
+    title: 'Tổng quan',
+    path: '/',
+    subMenu: [],
+  },
+  {
+    id: 2,
+    icon: 'users',
+    title: 'Khách hàng',
+    path: '/customer',
+    subMenu: [
+      { id: 200, subIcon: 'user-friends', subTitle: 'Lead', subPath: '/admin/contact/contact' },
+      { id: 201, subIcon: 'phone', subTitle: 'Telesales', subPath: '/admin/telesales/telesales' },
+      { id: 202, subIcon: 'users', subTitle: 'Khách hàng', subPath: '/admin/customer/customer' },
+      { id: 203, subIcon: 'chalkboard-teacher', subTitle: 'Nhà cung cấp', subPath: '/admin/supplier/supplier' },
+    ],
+  },
+  {
+    id: 3,
+    icon: 'bullhorn',
+    title: 'Marketing',
+    path: '/marketing',
+    subMenu: [
+      { id: 300, subIcon: 'clipboard-check', subTitle: 'Chiến dịch', subPath: '/admin/campaign/campaign' },
+      { id: 301, subIcon: 'calendar-plus', subTitle: 'Cơ hội', subPath: '/admin/opportunity/opportunity' },
+      { id: 305, subIcon: 'comment-dots', subTitle: 'SMS Marketing', subPath: '/admin/sms-marketing/sms-marketing' },
+      { id: 302, subIcon: 'bullhorn', subTitle: 'Zalo Marketing', subPath: '/admin/zalo-marketing/zalo-marketing' },
+      { id: 304, subIcon: 'envelope', subTitle: 'Email Marketing', subPath: '/admin/email-marketing/email-marketing' },
+      { id: 303, subIcon: ['fab', 'facebook-square'], subTitle: 'Facebook Marketing', subPath: '/admin/sale-online/sale-online'},
+      { id: 306, subIcon: 'file-word', subTitle: 'Web Form', subPath: '/admin/web-form/web-form'},
+      { id: 307, subIcon: 'users-cog', subTitle: 'Marketing Automation', subPath: '/admin/automation/automation'},
+      { id: 308, subIcon: 'tasks', subTitle: 'Xem nhanh chiến dịch', subPath: '/admin/campaign/kanban' },
+    ],
+  },
+  {
+    id: 4,
+    icon: 'briefcase',
+    title: 'Công việc',
+    path: '/task',
+    subMenu: [
+      { id: 400, subIcon: 'briefcase', subTitle: 'Công việc', subPath: '/admin/task/task' },
+      // { id: 401, subIcon: 'calendar-alt', subTitle: 'Lịch công việc', subPath: '/admin/task/calendar' },
+      { id: 402, subIcon: 'project-diagram', subTitle: 'Dự án', subPath: '/admin/project/project' },
+      { id: 403, subIcon: 'folder', subTitle: 'Tài liệu', subPath: '/admin/note-documents/note-documents'},
+    ]
+  },
+  {
+    id: 5,
+    icon: 'headphones',
+    title: 'CSKH',
+    path: '/support',
+    subMenu: [
+      { id: 500, subIcon: 'cog', subTitle: 'Thiết lập lịch CSKH', subPath: '/admin/setting/scheduler-care'},
+      { id: 501, subIcon: 'headphones', subTitle: 'Lịch CSKH', subPath: '/admin/scheduler-care/scheduler-care'},
+      { id: 502, subIcon: 'phone-square-alt', subTitle: 'Tổng đài', subPath: '/admin/call-center/call-center'},
+      { id: 503, subIcon: 'ticket-alt', subTitle: 'Ticket', subPath: '/admin/ticket/ticket' }
+    ]
+  },
+  {
+    id: 6,
+    icon: 'cubes',
+    title: 'Hàng hóa',
+    path: '/products',
+    subMenu: [
+      { id: 600, subIcon: 'cube', subTitle: 'Danh mục', subPath: '/admin/product/product' },
+      { id: 601, subIcon: 'tags', subTitle: 'Bảng giá', subPath: '/admin/price-book/price-book' },
+      { id: 602, subIcon: 'clipboard-check', subTitle: 'Kiểm kho', subPath: '/admin/stock-adjustment/list' },
+    ],
+  },
+  {
+    id: 7,
+    icon: 'exchange-alt',
+    title: 'Giao dịch',
+    path: '/transaction',
+    subMenu: [
+      { id: 700, subIcon: 'box', subTitle: 'Đặt hàng', subPath: '/admin/purchase-order/list' },
+      { id: 701, subIcon: 'file-alt', subTitle: 'Hóa đơn', subPath: '/admin/sell-order/list' },
+      { id: 702, subIcon: 'reply-all', subTitle: 'Trả hàng', subPath: '/admin/return-order/return-order' },
+      { id: 703, subIcon: 'cart-arrow-down', subTitle: 'Nhập hàng', subPath: '/admin/import-order/list' },
+      { id: 708, subIcon: 'upload', subTitle: 'Trả hàng nhập', subPath: '/admin/return-import/list' },
+      { id: 707, subIcon: 'download', subTitle: 'Đặt hàng nhập', subPath: '/admin/import-purchase/list' },
+      { id: 704, subIcon: 'dolly-flatbed', subTitle: 'Chuyển kho', subPath: '/admin/stock-transfer/list' },
+      { id: 705, subIcon: 'file-contract', subTitle: 'Hợp đồng', subPath: '/admin/contract/contract'},
+      { id: 706, subIcon: 'file-invoice-dollar', subTitle: 'Báo giá', subPath: '/admin/quote/quote'},
+    ],
+  },
+  {
+    id: 8,
+    icon: 'user-tie',
+    title: 'Nhân viên',
+    path: '/employee',
+    subMenu: [
+      { id: 800, subIcon: 'user-tie', subTitle: 'Nhân viên', subPath: '/admin/employee/employee' },
+      { id: 801, subIcon: 'coins', subTitle: 'Hoa hồng', subPath: '/admin/commission/commission' },
+      { id: 802, subIcon: 'business-time', subTitle: 'KPI', subPath: '/admin/kpi/kpi-list'},
+    ],
+  },
+  {
+    id: 9,
+    icon: 'dollar-sign',
+    title: 'Sổ quỹ',
+    path: '/admin/payment/payment',
+    subMenu: []
+  },
+  {
+    id: 10,
+    icon: 'chart-bar',
+    title: 'Báo cáo',
+    path: '/report',
+    subMenu: [
+      { id: 1000, subIcon: 'chart-line', subTitle: 'Hiệu quả Marketing', subPath: '/admin/crm/effective/marketing' },
+      { id: 1001, subIcon: 'chart-line', subTitle: 'Hiệu quả cơ hội', subPath: '/admin/crm/effective/opportunistic' },
+      { id: 1002, subIcon: 'calendar-check', subTitle: 'Cuối ngày', subPath: '/admin/report/end-of-day-report' },
+      { id: 1003, subIcon: 'box-tissue', subTitle: 'Bán hàng', subPath: '/admin/report/sale-report' },
+      { id: 1004, subIcon: 'download', subTitle: 'Nhập hàng', subPath: '/admin/report/import-report' },
+      { id: 1005, subIcon: 'cube', subTitle: 'Hàng hóa', subPath: '/admin/report/product-report' },
+      { id: 1006, subIcon: 'user', subTitle: 'Khách hàng', subPath: '/admin/report/customer-report' },
+      { id: 1011, subIcon: 'user-friends', subTitle: 'Nhà cung cấp', subPath: '/admin/report/supplier-report' },
+      { id: 1007, subIcon: 'user-tie', subTitle: 'Nhân viên', subPath: '/admin/report/employee-report' },
+      { id: 1008, subIcon: 'users', subTitle: 'Phòng ban', subPath: '/admin/report/department-report' },
+      { id: 1009, subIcon: 'chalkboard-teacher', subTitle: 'Kênh bán hàng', subPath: '/admin/report/channel-report' },
+      { id: 1010, subIcon: 'chart-line', subTitle: 'Tài chính', subPath: '/admin/report/financial-report' },
+    ],
+  },
+];
