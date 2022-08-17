@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styles from './styles.module.scss';
-import Logo from 'assets/images/logo/logo-white.png';
+// import Logo from 'assets/images/logo/logo-white.png';
 import {RiMenuFoldLine} from 'react-icons/ri';
 import Tooltip from 'components/base/tooltip/Tooltip';
 import { useRecoilState } from 'recoil';
@@ -28,10 +28,13 @@ const SideBar = () => {
       <div className={ `${styles.container} ${isVisible ? '' : 'sidebar-collapsed'}`} id='sidebar'>
         <div className="w-full flex items-center justify-between py-5 px-4 mb-4">
           <NavLink to='/'>
-            <img src={Logo} alt="logo" className='w-32 h-7' />
+            {/* <img src={Logo} alt="logo" className='w-32 h-7' /> */}
+            <p className='text-2xl pl-2'>
+              <span className='text-primary font-bold'>Next</span><span>CRM</span>
+            </p>   
           </NavLink>
           <div className='w-7 h-7 flex items-center justify-center text-xl cursor-pointer hover:bg-dark rounded-sm'
-            data-tip='Đóng Sidebar' data-for='sidebar-tooltip-collapse' data-delay-show='600'
+            data-tip='Đóng Sidebar' data-for='sidebar-tooltip-collapse' 
             onClick={handleCollapseSidebar}>
             <RiMenuFoldLine />
           </div> 
@@ -46,7 +49,7 @@ const SideBar = () => {
           }
         </ul>
       </div>
-      <Tooltip id='sidebar-tooltip-collapse' type='success' delayShow={600} />
+      <Tooltip id='sidebar-tooltip-collapse' type='success' />
     </>
   );
 };

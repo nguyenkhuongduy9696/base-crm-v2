@@ -4,6 +4,9 @@
     --color-background-strong: #f5f3f3;
     --color-primary: #0bc98d;
     --color-primary-strong: #0cba83;
+    --color-gray-light: #edeae9;
+    --color-gray-medium: #afabac;
+    --color-gray-strong: #6d6e6f;
 }
 
 *{
@@ -16,7 +19,7 @@ body {
     font-size: 13px;
     background-color: var(--color-background-weak);
     font-family: "Google Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    color: #34373a;
+    color: #2c3136;
 }
 
 ::-webkit-scrollbar {
@@ -101,7 +104,66 @@ body {
 .dropdown-ul li {
     padding: 8px 20px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 .dropdown-ul li:hover {
     background-color: #f8f8f8;
+}
+
+.dropdown-ul li .dropdown-icon {
+   font-size: 18px;
+   width: 24px;
+   color: var(--color-gray-strong)
+}
+
+.global-action .search-bar {
+    position: relative;
+}
+
+.global-action .search-bar .icon-left {
+    position: absolute;
+    font-size: 17px;
+    top: 8px;
+    left: 11px;
+}
+
+.global-action .search-bar .icon-right {
+    position: absolute;
+    font-size: 16px;
+    top: 8px;
+    right: 11px;
+    cursor: pointer;
+}
+
+.global-action .search-bar .input {
+    border-radius: 16px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cfcbcb;
+    padding: 0 32px;
+    height: 34px;
+    width: 180px;
+    transition: width 0.15s ease-out;
+}
+
+.global-action .search-bar .input.focus {
+    width: 480px;
+    border-color: #0bc98d;
+    box-shadow: 0 0 0 1px #0bc98d;
+}
+
+.global-action .search-bar .input:focus {
+    outline: none;
+}
+
+.global-action .search-bar .search-popup {
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 5px 20px 0 rgba(109, 110, 111, 0.08);
+    border-radius: 5px;
+    border: 1px solid #ebedf3;
+    white-space: nowrap;
+    width: 100%;
+    top: 36px;
 }

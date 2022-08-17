@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.btn {
+    @apply flex items-center justify-center h-8 focus:outline-none px-2 py-2 rounded-md;
+    transform: scale(1);
+}
+
+.btn:active {
+    -webkit-transform: translate(0px, 5px);
+    transform: translate(0px, 5px);
+    transform: scale(0.97) perspective(1px);
+}
+
+.btn-common {
+    @apply border border-gray-weak hover:border-gray-strong;
+}
+
+.btn-primary {
+    @apply border border-primary text-primary-strong hover:bg-primary hover:text-white;
+}
+
+.btn-red {
+    @apply border border-red text-red-strong hover:bg-red hover:text-white;
+}
+
+.btn-pink {
+    @apply border border-pink text-pink-strong hover:bg-pink hover:text-white;
+}
+
+.btn-yellow {
+    @apply border border-yellow text-yellow-strong hover:bg-yellow hover:text-white;
+}
+
+.btn-cyan {
+    @apply border border-cyan text-cyan-strong hover:bg-cyan hover:text-white;
+}
+
+.btn-gray {
+    @apply bg-gray-weak hover:bg-gray;
+}
