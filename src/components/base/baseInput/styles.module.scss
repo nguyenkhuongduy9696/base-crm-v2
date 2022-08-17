@@ -20,11 +20,23 @@
             &.iconRight {
                 padding-right: 35px
             }
+            &.iconLeft {
+                padding-left: 35px
+            }
             &:focus {
                 outline: none;
                 border-color: #57cc8a;
                 box-shadow: 0 0 0 1px #57cc8a;
             }
+            &.error {
+                border-color: #ef4a62;
+                box-shadow: 0 0 0 1px #ef4a62;
+                &:focus {
+                    border-color: #ef344f;
+                    box-shadow: 0 0 0 1px #ef344f;
+                }
+            }
+
         }
         .rightIconContainer {
             align-items: center;
@@ -57,6 +69,41 @@
                 }
             }
         }
+        .leftIconContainer {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            left: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            padding-right: 6px;
+            .leftIcon {
+                height: 28px;
+                min-height: 28px;
+                min-width: 28px;
+                width: 28px;
+                border-radius: 6px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                &:hover {
+                    background-color: #edeae9;
+                }
+                .icon {
+                    overflow: hidden;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
     }
-    
+    .errorText {
+        margin-top: 5px;
+        color: #ef4a62;
+        font-size: 12px;
+    }
 }

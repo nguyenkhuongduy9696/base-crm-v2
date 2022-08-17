@@ -1,12 +1,10 @@
-import BaseButton from 'components/base/baseButton/BaseButton';
 import React from 'react';
 
 const Actions = () => {
   return(
     <>
       <div className="flex items-center">
-          Trang chủ
-        <BaseButton />
+        <p className='pageHeader-title'>Trang chủ</p>
       </div>
     </>
   );

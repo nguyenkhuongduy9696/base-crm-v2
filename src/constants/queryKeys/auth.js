@@ -1,0 +1,1 @@
+export const CHECK_TENANT_KEY = 'CHECK_TENANT';

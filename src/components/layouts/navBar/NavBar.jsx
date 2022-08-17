@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import {RiMenuUnfoldFill} from 'react-icons/ri';
 import styles from './styles.module.scss';
-import Tooltip from 'components/base/tooltip/Tooltip';
 import {useRecoilState} from 'recoil';
 import {sidebarVisibleState} from 'recoil/atom/common';
 import {SIDEBAR_VISIBLE_STATE} from 'constants/localStorage';
@@ -39,11 +38,10 @@ const NavBar = ({children}) => {
       <div className={styles.container}>
         <div className="flex">
           <div className="flex">
-            <div className={ `${styles.collapseButton} ${isVisible ? 'hidden' : 'flex mr-3'}`} data-tip='Mở Sidebar' data-for='navbar-tooltip-expand'
+            <div className={ `${styles.collapseButton} ${isVisible ? 'hidden' : 'flex mr-3'}`} 
               onClick={handleExpandSidebar}>
               <RiMenuUnfoldFill />
             </div>
-            <Tooltip id='navbar-tooltip-expand' type='success' place='right' />
           </div>
           { children }
         </div>

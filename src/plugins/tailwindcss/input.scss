@@ -4,8 +4,12 @@
 
 
 .btn {
-    @apply flex items-center justify-center h-8 focus:outline-none px-2 py-2 rounded-md;
+    @apply flex items-center justify-center focus:outline-none rounded-md;
     transform: scale(1);
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 8px;
 }
 
 .btn:active {

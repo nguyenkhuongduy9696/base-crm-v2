@@ -31,6 +31,12 @@ $boxShadow : 0 5px 20px 0 rgba(52, 51, 51, 0.08);
         line-height: 36px;
         padding: 0 12px;
         cursor: pointer;
+        transform: scale(1);
+        &:active {
+            -webkit-transform: translate(0px, 5px);
+            transform: translate(0px, 5px);
+            transform: scale(0.97) perspective(1px);
+        }
     }
 }
 

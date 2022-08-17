@@ -1,6 +1,6 @@
 :root {
     --color-background-weak: #fff;
-    --color-background-medium: #f9f8f8;
+    --color-background-medium: #fffafa;
     --color-background-strong: #f5f3f3;
     --color-primary: #0bc98d;
     --color-primary-strong: #0cba83;
@@ -81,6 +81,11 @@ body {
 .separator {
     border-top: 1px solid #edeae9;
     margin: 4px 0;
+}
+
+.pageHeader-title {
+    font-size: 20px;
+    line-height: 28px;
 }
 
 .sidebar-collapsed {
