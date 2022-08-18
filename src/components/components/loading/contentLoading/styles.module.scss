@@ -1,0 +1,32 @@
+.navContainer {
+    width: 100%;
+    min-height: 72px;
+    max-height: 72px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+    // position: -webkit-sticky;
+    // position: sticky;
+    // top: 0;
+    padding: 0 24px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    .collapseButton {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        cursor: pointer;
+        color: gray;
+        &:hover {
+            background-color: var(--color-background-strong);
+        }
+    }
+}
+.mainContainer {
+    width: 100%;
+    height: calc(100vh - 72px);
+    background-color: red;
+}

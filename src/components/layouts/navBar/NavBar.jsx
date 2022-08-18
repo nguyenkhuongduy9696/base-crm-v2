@@ -5,7 +5,7 @@ import {useRecoilState, useRecoilValue} from 'recoil';
 import {sidebarVisibleState} from 'recoil/atom/common';
 import {SIDEBAR_VISIBLE_STATE, USER_LOGIN_BEFORE} from 'constants/localStorage';
 import BasePopup from 'components/base/basePopup/BasePopup';
-import {BsPlusLg} from 'react-icons/bs';
+import {ImCog} from 'react-icons/im';
 import {BiTask} from 'react-icons/bi';
 import {IoIosSearch} from 'react-icons/io';
 import {BsChevronDown} from 'react-icons/bs';
@@ -14,11 +14,11 @@ import { authenticatedUserState } from 'recoil/atom/auth';
 import UserPicture from 'assets/images/user.png';
 import { ACCESS_TOKEN, removeCookie } from 'helpers/cookie';
 import { useNavigate } from 'react-router-dom';
+import Tooltip from 'components/base/tooltip/Tooltip';
 
 const accountButtonStyles = 'w-8 h-8 flex items-center justify-center' + 
 ' rounded-full cursor-pointer';
-const plusButtonStyles = 'w-8 h-8 flex items-center justify-center bg-primary hover:bg-primary-strong' + 
-' text-12 rounded-full text-white cursor-pointer';
+const settingButtonStyles = 'w-8 h-8 flex items-center justify-center bg-primary hover:bg-primary-strong text-16 rounded-full text-white cursor-pointer';
 
 const NavBar = ({children}) => {
   const navigate = useNavigate();
@@ -72,8 +72,8 @@ const NavBar = ({children}) => {
             </div>
           </div>
           <BasePopup dropdownClassName='ml-3'>
-            <div className={plusButtonStyles}>
-              <BsPlusLg />
+            <div className={settingButtonStyles} data-tip='Thiết lập' data-for='icon_setting'>
+              <ImCog />
             </div>
             <ul className='dropdown-ul'>
               <li>
@@ -108,6 +108,7 @@ const NavBar = ({children}) => {
           </BasePopup>
         </div>
       </div>
+      <Tooltip id='icon_setting' />
     </>
   );
 };

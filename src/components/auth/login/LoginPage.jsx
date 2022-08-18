@@ -38,7 +38,7 @@ const LoginPage = () => {
   const {refetch} = useQuery(
     [AUTH_USER_INFO_KEY],
     () => getAuthUserInfo(),
-    {enabled: false}
+    {enabled: false, suspense: false}
   );
 
   const onSubmit = (value) => {

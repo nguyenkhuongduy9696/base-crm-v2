@@ -12,7 +12,10 @@ import {RecoilRoot} from 'recoil';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import '@progress/kendo-theme-material/dist/all.css';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -22,6 +25,7 @@ const queryClient = new QueryClient({
     }
   }
 });
+
 root.render(
   <QueryClientProvider client={queryClient}>
     <RecoilRoot>

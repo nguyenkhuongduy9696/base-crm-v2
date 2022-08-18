@@ -1,6 +1,6 @@
+import GridLoading from 'components/components/loading/contentLoading/GridLoading';
 import React from 'react';
 import { useLocation} from 'react-router-dom';
-import LoadingScreen from './loadingScreen/LoadingScreen';
 import Sidebar from './sideBar/Sidebar';
 import styles from './styles.module.scss';
 
@@ -18,19 +18,17 @@ const MainLayout = ({children}) => {
   };
 
   return(
-    <React.Suspense fallback={<LoadingScreen />}>
-      {
-        checkNoLayout() ? <>{children}</> : 
-          <>
-            <div className="w-full flex">
-              <Sidebar />
-              <div className={styles.mainContainer}>
-                {children}
-              </div>
-            </div>
-          </>
-      }
-    </React.Suspense>
+    checkNoLayout() ? <>{children}</> : 
+      <>
+        <div className="w-full flex">
+          <Sidebar />
+          <div className={styles.mainContainer}>
+            <React.Suspense fallback={<GridLoading />}>
+              {children}
+            </React.Suspense>
+          </div>
+        </div>
+      </>
   );
 };
 
