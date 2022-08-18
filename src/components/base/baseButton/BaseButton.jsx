@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Tooltip from '../tooltip/Tooltip';
+import { useIsFetching, useIsMutating } from '@tanstack/react-query';
 
 const BaseButton = ({
   title = '',
@@ -14,12 +15,19 @@ const BaseButton = ({
   className = '',
   titleClassName = '',
   iconLeftClassName = 'mr-1 text-16',
-  iconRightClassName = 'ml-1 text-16'
+  iconRightClassName = 'ml-1 text-16',
+  enable = true,
+  type = 'button'
 }) => {
+  const isMutation = useIsMutating();
+  const isFetching = useIsFetching();
+
   return(
     <>
-      <button className={ `btn ${className} `} data-tip={tooltip ? tooltip : ''} data-for={tooltipId}
-        onClick={onClick}>
+      <button className={ `btn ${ enable ? type === 'submit' ? isMutation && isFetching ? `${className}` : 'btn-gray disabled' : `${className}` : 'btn-gray disabled' } `}
+        data-tip={tooltip ? tooltip : ''} 
+        data-for={tooltipId}
+        onClick={ enable ? type === 'submit' ? isMutation && isFetching ? onClick : null : onClick : null}>
         <span className={iconLeftClassName}>
           {iconLeft}
         </span>
@@ -47,7 +55,9 @@ BaseButton.propTypes = {
   className: PropTypes.string,
   titleClassName: PropTypes.string,
   iconLeftClassName: PropTypes.string,
-  iconRightClassName: PropTypes.string
+  iconRightClassName: PropTypes.string,
+  enable: PropTypes.bool,
+  type: PropTypes.string
 };
 
 export default React.memo(BaseButton);

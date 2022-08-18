@@ -1,6 +1,6 @@
 import { axiosInstance } from 'helpers/axios';
 
-export function authApi () {
+export function authApis () {
   const checkTenant = async (tenant) => {
     const url = window.location.hostname.split('.');
     const type = url[1];
@@ -8,5 +8,15 @@ export function authApi () {
     return data;
   };
 
-  return {checkTenant};
+  const getAuthUserInfo = async () => {
+    const {data} = await axiosInstance.get('/user/me');
+    return data;
+  };
+
+  const login = async (params) => {
+    const {data} = await axiosInstance.post('/auth/login', params);
+    return data;
+  };
+
+  return {checkTenant, getAuthUserInfo, login};
 }

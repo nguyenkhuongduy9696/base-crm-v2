@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation} from 'react-router-dom';
+import LoadingScreen from './loadingScreen/LoadingScreen';
 import Sidebar from './sideBar/Sidebar';
 import styles from './styles.module.scss';
 
@@ -17,7 +18,7 @@ const MainLayout = ({children}) => {
   };
 
   return(
-    <React.Suspense fallback={<>...</>}>
+    <React.Suspense fallback={<LoadingScreen />}>
       {
         checkNoLayout() ? <>{children}</> : 
           <>

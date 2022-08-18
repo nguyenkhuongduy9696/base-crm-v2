@@ -10,9 +10,10 @@
     height: 28px;
     line-height: 28px;
     padding: 0 8px;
+    font-weight: 500;
 }
 
-.btn:active {
+.btn:not(.disabled):active {
     -webkit-transform: translate(0px, 5px);
     transform: translate(0px, 5px);
     transform: scale(0.97) perspective(1px);
@@ -43,5 +44,10 @@
 }
 
 .btn-gray {
-    @apply bg-gray-weak hover:bg-gray;
+    @apply bg-gray-weak ;
+    color: #6d6e6f;
+}
+
+.btn-gray:not(.disabled) {
+    @apply hover:bg-gray;
 }
