@@ -69,7 +69,13 @@ const GridLoading = () => {
           </div>
         </div>
         <div className={styles.mainContainer}>
-            
+          <Skeleton
+            shape={'rectangle'}
+            style={{
+              width: '100%',
+              height: '100%',
+            }}
+          />
         </div>
       </div>
     </>
